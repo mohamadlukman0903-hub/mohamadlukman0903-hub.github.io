@@ -1,1 +1,122 @@
 <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIM Latihan Indonesia</title>
+  <meta name="description" content="Latihan soal dan simulasi ujian SIM A dan SIM C dengan timer dan skor." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111111;
+      --card:#f3f4f6;
+      --accent:#2563eb;
+    }
+    [data-theme="dark"]{
+      --bg:#0f172a;
+      --fg:#e5e7eb;
+      --card:#020617;
+      --accent:#60a5fa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--fg);
+      line-height:1.6;
+    }
+    header{
+      padding:48px 16px;
+      background:linear-gradient(135deg,var(--accent),#22c55e);
+      color:white;
+      text-align:center;
+    }
+    header h1{margin:0 0 8px;font-size:2.2rem}
+    header p{margin:0;opacity:.95}
+    main{max-width:960px;margin:auto;padding:24px 16px}
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:20px;
+    }
+    h2{margin-top:0}
+    ul{padding-left:20px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    button{
+      border:none;
+      border-radius:8px;
+      padding:10px 14px;
+      font-size:14px;
+      cursor:pointer;
+    }
+    .primary{background:var(--accent);color:white}
+    .ghost{background:transparent;color:var(--fg);border:1px solid rgba(0,0,0,.1)}
+    footer{
+      text-align:center;
+      padding:24px 16px;
+      font-size:14px;
+      opacity:.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SIM Latihan Indonesia</h1>
+    <p>Latihan soal dan simulasi ujian SIM A dan SIM C dengan timer dan skor.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Tentang Aplikasi</h2>
+      <p>
+        SIM Latihan Indonesia adalah aplikasi latihan soal dan simulasi ujian untuk membantu pengguna mempersiapkan diri menghadapi ujian SIM A dan SIM C.
+      </p>
+      <p>
+        Aplikasi ini menyediakan kumpulan soal pilihan ganda yang disusun sebagai bahan latihan, dilengkapi dengan mode ujian dan sistem penilaian agar pengguna dapat mengukur tingkat pemahaman mereka.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Fitur Utama</h2>
+      <ul>
+        <li>Latihan soal SIM A (mobil)</li>
+        <li>Latihan soal SIM C (sepeda motor)</li>
+        <li>Mode ujian dengan timer</li>
+        <li>Pilihan jumlah soal dan durasi ujian</li>
+        <li>Penilaian otomatis setelah ujian</li>
+        <li>Riwayat skor untuk melihat hasil latihan sebelumnya</li>
+        <li>Mode terang dan gelap</li>
+        <li>Akses kebijakan privasi langsung dari aplikasi</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Catatan</h2>
+      <p>
+        Aplikasi ini dibuat sebagai sarana belajar dan latihan. Soal-soal yang tersedia bersifat edukatif dan tidak mewakili ujian resmi dari instansi manapun.
+      </p>
+      <p>
+        SIM Latihan Indonesia dapat digunakan oleh siapa saja yang ingin membiasakan diri dengan format soal ujian SIM secara mandiri.
+      </p>
+    </div>
+
+    <div class="actions">
+      <button class="primary" onclick="toggleTheme()">Ganti Mode Terang/Gelap</button>
+      <button class="ghost" onclick="alert('Halaman kebijakan privasi belum ditambahkan')">Kebijakan Privasi</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 SIM Latihan Indonesia
+  </footer>
+
+  <script>
+    function toggleTheme(){
+      const html=document.documentElement;
+      html.dataset.theme=html.dataset.theme==='dark'?'light':'dark';
+    }
+  </script>
+</body>
+</html>
